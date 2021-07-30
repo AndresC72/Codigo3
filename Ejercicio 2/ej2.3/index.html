@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .registrado{
+           /*  text-decoration: line-through; */
+           color: red;
+        }
+    </style>
+    
+
+</head>
+<body>
+
+    <div id="main">
+        <h1>En este campo podemos ya sea Agregar un nuevo usuario o hacer una busqueda de los usuarios </h1>
+        <input type="text" placeholder="usuario nuevo/buscar usuario" v-model="usuario">
+        <button v-on:click="agregarTarea">Agregar Usuario</button>
+        <hr>
+        <ul>
+            <h2>Lista de usuarios</h2>
+            <li v-for="item in usuarios">
+                {{item.nombre}}
+            </li>
+        </ul> 
+        <hr>
+        <h3>Busqueda de usuarios por nombre</h3>
+        <hr>
+        Resultado de la busqueda:
+        <hr>
+        <ul>
+            <li v-for="item in mostrarPorTitulo">
+                {{item.nombre}}
+            </li>
+        </ul>
+
+
+
+        <h2>Listado de registros de usuario</h2>
+        <h2>Haga click sobre el usuario para mostrar el detalle</h2>
+        <ul> 
+            <li   v-bind:class="{registrado: usuario.registrado}"
+                  @click="completarTarea(usuario)"
+                  v-for="usuario in usuarios">
+                {{usuario.nombre}}
+            </li>
+        </ul>
+        <hr>
+
+      <!--   <pre>
+            {{usuarios}}
+        </pre>
+ -->
+
+        <h3>Usuario registrado</h3>
+                <ul>
+                    <li v-for="item in mostrarCompletadas">
+                        {{item.nombre}}
+                         {{item.apellido}}
+                        {{item.email}}
+                        {{item.telefono}} 
+                    </li>
+                </ul>
+
+  
+    </div>
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/codigo.js"></script>
+</body>
+</html>
