@@ -1,6 +1,6 @@
-# Codigo3
+# Codigo3 🎉 
 
-Nota:
+ ✨ Nota: ✨ 
 
 -Las respuestas a las preguntas del ejercicio 1 estan en el documento de word(EJERCICIO 1/TEST Junior Developer.docx) y tanto el codigo como dicho documento se encuentran en la carpeta (EJERCICIO 1)
 
@@ -8,4 +8,6 @@ Nota:
 
 -El reto fue realizado en Vue.js ya que su reactividad me permite tener mayor control sobre dicha API
 
-💥 👌 🚀 💥 
+
+🎨  👌 👌 🎨 
+
